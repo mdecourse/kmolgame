@@ -2,8 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Brython Server</title>
-
+<title>Game Template</title>
 <link rel="shortcut icon" href="css/favicon.ico">    
 <link rel="stylesheet" type="text/css" href="css/bssite.css" media="screen" />
  
@@ -22,6 +21,7 @@ brython({debug:1, pythonpath:['static']});
 }
 </script>
 <script type="text/python">
+# 導入模組
 from ggame import App, ImageAsset, Sprite, MouseEvent
 from random import random, randint
 
@@ -87,6 +87,8 @@ class DemoApp(App):
 app = DemoApp()  
 # Run the app
 app.run()
+
 </script>
 </body>
 </html>
+

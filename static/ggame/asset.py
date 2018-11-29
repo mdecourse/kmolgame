@@ -36,14 +36,14 @@ class Frame(object):
         self.y = y
         self.w = w
         self.h = h
-    
+
     @property
     def x(self):
         """
         X-coordinate of the upper left hand corner of this frame.
         """
         return self.GFX.x
-    
+
     @x.setter
     def x(self, value):
         self.GFX.x = value
@@ -54,18 +54,18 @@ class Frame(object):
         Y-coordinate of the upper left hand corner of this frame.
         """
         return self.GFX.y
-    
+
     @y.setter
     def y(self, value):
         self.GFX.y = value
-    
+
     @property
     def w(self):
         """
         Width of the frame.
         """
         return self.GFX.width
-    
+
     @w.setter
     def w(self, value):
         self.GFX.width = value
@@ -80,7 +80,7 @@ class Frame(object):
     @h.setter
     def h(self, value):
         self.GFX.height = value
-    
+
     @property
     def center(self):
         """
@@ -93,7 +93,7 @@ class Frame(object):
         """
 
         return (self.x + self.w//2, self.y + self.h//2)
-    
+
     @center.setter
     def center(self, value):
         c = self.center
@@ -345,7 +345,7 @@ class _ShapeAsset(_CurveAsset):
     def __init__(self, line, fill):
         super().__init__(line)
         GFX_Graphics.beginFill(fill.color, fill.alpha)
-    
+
 
 class RectangleAsset(_ShapeAsset):
     """
@@ -439,7 +439,7 @@ class PolygonAsset(_ShapeAsset):
         self.GFX = GFX_Graphics.drawPolygon(jpath).clone()
         """The `GFX` property represents the underlying system object."""
         self.GFX.visible = False
-    
+
 
 class LineAsset(_CurveAsset):
     """
@@ -525,7 +525,7 @@ class TextAsset(_GraphicsAsset):
             width = self.width,
             fill = self.fill,
             align = self.align)
-    
+
     @property
     def width(self):
         return self.GFX.width

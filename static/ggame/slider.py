@@ -112,7 +112,7 @@ class Slider(_MathVisual):
                 
     def step(self):
         pass
-    
+
     def _setval(self, val):
         minval = self._nposinputs.minval()
         maxval = self._nposinputs.maxval()
