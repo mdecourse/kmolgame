@@ -14,7 +14,7 @@
 <v t="leo.20181129164322.1"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129163716.1"><vh>game body</vh></v>
 </v>
-<v t="leo.20181129165714.1" a="E"><vh>@clean game2.html</vh>
+<v t="leo.20181129165714.1"><vh>@clean game2.html</vh>
 <v t="leo.20181129165714.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129165714.3"><vh>game body</vh></v>
 </v>
@@ -478,7 +478,7 @@
 <v t="leo.20181129171707.136"><vh>Sound.volume</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.20"><vh>@clean sprite.py</vh>
+<v t="leo.20181129171705.20" a="E"><vh>@clean sprite.py</vh>
 <v t="leo.20181129171707.137"><vh>Declarations (sprite.py)</vh></v>
 <v t="leo.20181129171707.138" a="E"><vh>class Sprite</vh>
 <v t="leo.20181129171707.139"><vh>Sprite.__init__</vh></v>
