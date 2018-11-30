@@ -82,8 +82,7 @@ class Sprite(object):
             LineAsset,
             ]:
             self.asset = asset
-            #self.GFX = GFX_Sprite(asset.GFX.generateTexture())
-            self.GFX = GFX_Sprite(asset.GFX.generateCanvasTexture())
+            self.GFX = GFX_Sprite(asset.GFX.generateTexture())
             #self.GFX = asset.GFX.clone() # GFX is PIXI Graphics (from Sprite)
             #self.GFX.visible = True
         elif type(asset) in [TextAsset]:
