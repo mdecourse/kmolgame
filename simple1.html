@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>simple1</title>
+
+<link rel="shortcut icon" href="css/favicon.ico">    
+<link rel="stylesheet" type="text/css" href="css/bssite.css" media="screen" />
+ 
+<script type="text/javascript" src="static/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="static/jquery-ui.1.12.1.min.js" ></script>
+<script type="text/javascript" src="static/pixi-4.8.2.min.js"></script>
+<script type="text/javascript" src="static/buzz-1.2.1.js"></script>
+<script type="text/javascript" src="static/brython-3.7.0.js"></script>
+<script type="text/javascript" src="static/brython_stdlib-3.7.0.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+window.onload=function(){
+brython({debug:1, pythonpath:['static']});
+}
+</script>
+<script type="text/python">
+'''
+# 從 ggame 目錄中, 導入 App, ImageAsset 與 Sprite 模組
+from ggame import (
+    App, 
+    ImageAsset, 
+    Sprite, 
+    LineAsset,
+    LineStyle,
+    Color
+)
+# Create a displayed object at 100,100 using an image asset
+Sprite(ImageAsset("images/bunny.png"), (100,100))
+# Create the app, with a default stage
+app = App()  
+# Run the app
+app.run()
+'''
+from ggame import App, Color, LineStyle, Sprite
+from ggame import RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
+
+# Three primary colors with no transparency (alpha = 1.0)
+red = Color(0xff0000, 1.0)
+green = Color(0x00ff00, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0x000000, 1.0)
+
+# Define a line style that is a thin (1 pixel) wide black line
+thinline = LineStyle(1, black)
+# A graphics asset that represents a rectangle
+rectangle = RectangleAsset(50, 20, thinline, blue)
+
+# Now display a rectangle
+Sprite(rectangle)
+
+myapp = App()
+myapp.run()
+
+</script>
+</body>
+</html>
+

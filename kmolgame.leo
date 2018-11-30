@@ -14,7 +14,7 @@
 <v t="leo.20181129164322.1"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129163716.1"><vh>game body</vh></v>
 </v>
-<v t="leo.20181129165714.1"><vh>@clean game2.html</vh>
+<v t="leo.20181129165714.1" a="E"><vh>@clean game2.html</vh>
 <v t="leo.20181129165714.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129165714.3"><vh>game body</vh></v>
 </v>
@@ -43,7 +43,7 @@
 <v t="leo.20181129171705.39"><vh>App.run</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.3"><vh>@clean asset.py</vh>
+<v t="leo.20181129171705.3" a="E"><vh>@clean asset.py</vh>
 <v t="leo.20181129171705.40"><vh>Declarations (asset.py)</vh></v>
 <v t="leo.20181129171705.41"><vh>class Frame</vh>
 <v t="leo.20181129171705.42"><vh>Frame.__init__</vh></v>
@@ -83,7 +83,7 @@
 <v t="leo.20181129171705.72"><vh>LineStyle.__eq__</vh></v>
 <v t="leo.20181129171705.73"><vh>LineStyle.__repr__</vh></v>
 </v>
-<v t="leo.20181129171705.74"><vh>class _GraphicsAsset</vh>
+<v t="leo.20181129171705.74" a="E"><vh>class _GraphicsAsset</vh>
 <v t="leo.20181129171705.75"><vh>_GraphicsAsset.__init__</vh></v>
 </v>
 <v t="leo.20181129171705.76"><vh>class _CurveAsset</vh>
@@ -254,7 +254,7 @@
 <v t="leo.20181129171706.51"><vh>Label.translate</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.12"><vh>@clean line.py</vh>
+<v t="leo.20181129171705.12" a="E"><vh>@clean line.py</vh>
 <v t="leo.20181129171706.52"><vh>Declarations (line.py)</vh></v>
 <v t="leo.20181129171706.53"><vh>class LineSegment</vh>
 <v t="leo.20181129171706.54"><vh>LineSegment.__init__</vh></v>
@@ -304,7 +304,7 @@
 <v t="leo.20181129171706.88"><vh>BoolSRFF.Q</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.14"><vh>@clean mathapp.py</vh>
+<v t="leo.20181129171705.14" a="E"><vh>@clean mathapp.py</vh>
 <v t="leo.20181129171706.89"><vh>Declarations (mathapp.py)</vh></v>
 <v t="leo.20181129171706.90"><vh>class MathApp</vh>
 <v t="leo.20181129171706.91"><vh>MathApp.__init__</vh></v>
@@ -347,7 +347,7 @@
 <v t="leo.20181129171707.24"><vh>_MathDynamic.Eval</vh></v>
 <v t="leo.20181129171707.25"><vh>_MathDynamic._setDynamic</vh></v>
 </v>
-<v t="leo.20181129171707.26"><vh>class _MathVisual</vh>
+<v t="leo.20181129171707.26" a="E"><vh>class _MathVisual</vh>
 <v t="leo.20181129171707.27"><vh>_MathVisual.__init__</vh></v>
 <v t="leo.20181129171707.28"><vh>_MathVisual.step</vh></v>
 <v t="leo.20181129171707.29"><vh>_MathVisual._saveInputs</vh></v>
@@ -439,7 +439,7 @@
 </v>
 <v t="leo.20181129171705.18" a="E"><vh>@clean slider.py</vh>
 <v t="leo.20181129171707.103"><vh>Declarations (slider.py)</vh></v>
-<v t="leo.20181129171707.104"><vh>class Slider</vh>
+<v t="leo.20181129171707.104" a="E"><vh>class Slider</vh>
 <v t="leo.20181129171707.105"><vh>Slider.__init__</vh></v>
 <v t="leo.20181129171707.106"><vh>Slider._thumbXY</vh></v>
 <v t="leo.20181129171707.107"><vh>Slider.__call__</vh></v>
@@ -478,9 +478,9 @@
 <v t="leo.20181129171707.136"><vh>Sound.volume</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.20"><vh>@clean sprite.py</vh>
+<v t="leo.20181129171705.20" a="E"><vh>@clean sprite.py</vh>
 <v t="leo.20181129171707.137"><vh>Declarations (sprite.py)</vh></v>
-<v t="leo.20181129171707.138"><vh>class Sprite</vh>
+<v t="leo.20181129171707.138" a="E"><vh>class Sprite</vh>
 <v t="leo.20181129171707.139"><vh>Sprite.__init__</vh></v>
 <v t="leo.20181129171707.140"><vh>Sprite._createBaseVertices</vh></v>
 <v t="leo.20181129171707.141"><vh>Sprite._xformVertices</vh></v>
@@ -544,6 +544,12 @@
 <v t="leo.20181129163357.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
 <v t="leo.20181129164549.1"><vh>有關 kmolgame</vh></v>
+<v t="leo.20181130073250.1" a="E"><vh>最簡單的 Ggame 範例</vh>
+<v t="leo.20181130073306.1" a="E"><vh>@clean simple1.html</vh>
+<v t="leo.20181130073306.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
+<v t="leo.20181130073306.3"><vh>game body</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="leo.20181129163357.1"></t>
@@ -666,7 +672,9 @@ brython({debug:1, pythonpath:['static']});
 @others
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</t>
+&lt;/html&gt;
+
+</t>
 <t tx="leo.20181129163716.1">@language python
 # 導入模組
 from ggame import App, ImageAsset, Sprite, MouseEvent
@@ -733,8 +741,11 @@ class DemoApp(App):
 # Create the app
 app = DemoApp()  
 # Run the app
-app.run()</t>
-<t tx="leo.20181129164111.1">import os
+app.run()
+
+</t>
+<t tx="leo.20181129164111.1">@language python
+import os
 import subprocess
 import threading
 import http.server, ssl
@@ -756,7 +767,9 @@ def domake():
 # 利用執行緒執行 https 伺服器
 make = threading.Thread(target=domake)
 make.start()</t>
-<t tx="leo.20181129164322.1">&lt;title&gt;Game1&lt;/title&gt;</t>
+<t tx="leo.20181129164322.1">&lt;title&gt;Game1&lt;/title&gt;
+
+</t>
 <t tx="leo.20181129164549.1">kmolgame 是一套以 brython 與 pixi 程式庫為主的網際程式庫
 以下使用 clone node clean</t>
 <t tx="leo.20181129165714.1">@language html
@@ -785,8 +798,12 @@ brython({debug:1, pythonpath:['static']});
 @others
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</t>
-<t tx="leo.20181129165714.2">&lt;title&gt;太空大戰&lt;/title&gt;</t>
+&lt;/html&gt;
+
+</t>
+<t tx="leo.20181129165714.2">&lt;title&gt;太空大戰&lt;/title&gt;
+
+</t>
 <t tx="leo.20181129165714.3">@language python
 # 導入所需模組
 from ggame import App, Sprite, ImageAsset, Frame
@@ -1199,7 +1216,9 @@ class Spacewar(App):
                 self.tsprites['winner'].x = self.width*3/4-50 if self.ship1.dead else self.width/4-50
 
 app = Spacewar()
-app.run()</t>
+app.run()
+
+</t>
 <t tx="leo.20181129171546.1"></t>
 <t tx="leo.20181129171705.10">@others
 @language python
@@ -7304,5 +7323,75 @@ def _addVisual(cls, obj):
     return self.time
 
 </t>
+<t tx="leo.20181130073250.1"></t>
+<t tx="leo.20181130073306.1">@language html
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;&lt;game_title&gt;&gt;
+&lt;link rel="shortcut icon" href="css/favicon.ico"&gt;    
+&lt;link rel="stylesheet" type="text/css" href="css/bssite.css" media="screen" /&gt;
+ 
+&lt;script type="text/javascript" src="static/jquery-3.3.1.min.js" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/jquery-ui.1.12.1.min.js" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/pixi-4.8.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/buzz-1.2.1.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/brython-3.7.0.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/brython_stdlib-3.7.0.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+window.onload=function(){
+brython({debug:1, pythonpath:['static']});
+}
+&lt;/script&gt;
+&lt;script type="text/python"&gt;
+@others
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</t>
+<t tx="leo.20181130073306.2">&lt;title&gt;simple1&lt;/title&gt;
+
+</t>
+<t tx="leo.20181130073306.3">@language python
+'''
+# 從 ggame 目錄中, 導入 App, ImageAsset 與 Sprite 模組
+from ggame import (
+    App, 
+    ImageAsset, 
+    Sprite, 
+    LineAsset,
+    LineStyle,
+    Color
+)
+# Create a displayed object at 100,100 using an image asset
+Sprite(ImageAsset("images/bunny.png"), (100,100))
+# Create the app, with a default stage
+app = App()  
+# Run the app
+app.run()
+'''
+from ggame import App, Color, LineStyle, Sprite
+from ggame import RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
+
+# Three primary colors with no transparency (alpha = 1.0)
+red = Color(0xff0000, 1.0)
+green = Color(0x00ff00, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0x000000, 1.0)
+
+# Define a line style that is a thin (1 pixel) wide black line
+thinline = LineStyle(1, black)
+# A graphics asset that represents a rectangle
+rectangle = RectangleAsset(50, 20, thinline, blue)
+
+# Now display a rectangle
+Sprite(rectangle)
+
+myapp = App()
+myapp.run()</t>
 </tnodes>
 </leo_file>
