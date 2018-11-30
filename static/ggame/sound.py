@@ -72,4 +72,4 @@ class Sound(object):
     @volume.setter
     def volume(self, value):
         self.SND.setVolume(value)
-       
+   

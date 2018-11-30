@@ -227,7 +227,7 @@ class MathApp(App):
                 MathApp._ycenter -= lmove[1]
                 self._touchAllVisuals()
                 self._viewNotify("translate")
-
+    
     def _handleMouseWheel(self, event):
         zoomfactor = event.wheelDelta/100
         zoomfactor = 1+zoomfactor if zoomfactor > 0 else 1+zoomfactor
@@ -274,7 +274,7 @@ class MathApp(App):
         :returns: Nothing
         """
         cls._viewNotificationList.remove(handler)
-
+    
     def _viewNotify(self, viewchange):
         for handler in self._viewNotificationList:
             handler(viewchange = viewchange, scale = self._scale, center = (self._xcenter, self._ycenter))
@@ -368,6 +368,7 @@ class MathApp(App):
         This will clean up any class level storage.
         """ 
         App._destroy(*args)  # hit the App class first
+        MathApp.time = None
         MathApp._mathVisualList = [] 
         MathApp._mathDynamicList = []
         MathApp._mathMovableList = []
@@ -380,13 +381,13 @@ class _MathDynamic(metaclass=ABCMeta):
     
     def __init__(self):
         self._dynamic = False  # not switched on, by default!
-
+    
     def destroy(self):
         MathApp._removeDynamic(self)
 
     def step(self):
         pass
-
+    
     def Eval(self, val):
         if callable(val):
             self._setDynamic() # dynamically defined .. must step
@@ -487,7 +488,7 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
             self._NPI(*[p() for p in self._nposinputs]),
             self._SI(*[p() for p in self._stdinputs]))
 
-
+    
     def _getPhysicalInputs(self):
         """
         Translate all positional inputs to physical
@@ -505,11 +506,11 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
             # already physical
             pplist = [p() for p in self._posinputs]
         self._pposinputs = self._PI(*pplist)
-
+    
     def _inputsChanged(self, saved):
         return self._spposinputs != saved[1] or self._snposinputs != saved[2] or self._sstdinputs != saved[3]
 
-
+    
     def destroy(self):
         MathApp._removeVisual(self)
         MathApp._removeMovable(self)
@@ -536,11 +537,11 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
         Whether object was created with 'logical' or 'physical' positioning. 
         """
         return self._positioning
-
+    
     @positioning.setter
     def positioning(self, val):
         pass
-
+    
     @property
     def movable(self):
         """
@@ -647,7 +648,7 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
         This method **must** be overridden.
         """
         pass
-
+    
     @abstractmethod
     def translate(self, pdisp):
         """ 
@@ -660,7 +661,7 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
         This method **must** be overridden.
         """
         pass
-
+    
     def stroke(self, ppos, pdisp):
         """
         Perform necessary processing in response to click-drag action by the
@@ -674,7 +675,7 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
         This method is intended to be overridden.
         """
         pass
-
+    
     def canStroke(self, ppos):
         """
         Can the object respond to beginning a stroke action at the given
@@ -687,7 +688,7 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
         This method is intended to be overridden.
         """
         return False
-
+    
     def _touchAsset(self, force = False):
         inputs = self._getInputs()
         changed = self._inputsChanged(inputs)
@@ -696,8 +697,8 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
         if changed or force:
             self._updateAsset(self._buildAsset())
 
-
+    
     @abstractmethod
     def _buildAsset(self):
         pass
-
+    

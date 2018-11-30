@@ -8,13 +8,13 @@ class _MathDynamic(metaclass=ABCMeta):
     
     def __init__(self):
         self._dynamic = False  # not switched on, by default!
-
+    
     def destroy(self):
         MathApp._removeDynamic(self)
 
     def step(self):
         pass
-
+    
     def Eval(self, val):
         if callable(val):
             self._setDynamic() # dynamically defined .. must step
@@ -103,7 +103,7 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
             self.NPI(*[p() for p in self.nposinputs]),
             self.SI(*[p() for p in self.stdinputs]))
 
-
+    
     def _getPhysicalInputs(self):
         """
         Translate all positional inputs to physical
@@ -121,11 +121,11 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
             # already physical
             pplist = [p() for p in self.posinputs]
         self.pposinputs = self.PI(*pplist)
-
+    
     def _inputsChanged(self, saved):
         return self.spposinputs != saved[1] or self.snposinputs != saved[2] or self.sstdinputs != saved[3]
 
-
+    
     def destroy(self):
         MathApp._removeVisual(self)
         MathApp._removeMovable(self)
@@ -203,20 +203,20 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
     @abstractmethod
     def physicalPointTouching(self, ppos):
         pass
-
+    
     # define how your class responds to being moved (physical units)
     @abstractmethod
     def translate(self, pdisp):
         pass
-
+    
     # define how your class responds to being stroked (physical units)
     def stroke(self, ppos, pdisp):
         pass
-
+    
     # is the mousedown in a place that will result in a stroke?
     def canstroke(self, ppos):
         return False
-
+    
     def _touchAsset(self, force = False):
         inputs = self._getInputs()
         changed = self._inputsChanged(inputs)
@@ -225,8 +225,8 @@ class _MathVisual(Sprite, _MathDynamic, metaclass=ABCMeta):
         if changed or force:
             self._updateAsset(self._buildAsset())
 
-
+    
     @abstractmethod
     def _buildAsset(self):
         pass
-
+    

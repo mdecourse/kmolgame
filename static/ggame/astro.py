@@ -249,7 +249,7 @@ class Rocket(ImagePoint):
         Report the view scale (pixels/meter) as a text string.
         """
         return "View Scale:   {0:8.6f} px/m".format(self.planet.scale)
-
+    
     def timeZoomText(self):
         """
         Report the time acceleration as a text string.
@@ -261,7 +261,7 @@ class Rocket(ImagePoint):
         Report the elapsed time as a text string.
         """
         return "Elapsed Time: {0:8.1f} s".format(float(self.shiptime))
-
+    
 
 
             
@@ -320,7 +320,7 @@ class Rocket(ImagePoint):
         Vector add utility.
         """
         return [v1[i]+v2[i] for i in (0,1)]
-
+    
     def vmul(self, s, v):
         """
         Scalar vector multiplication utility.
@@ -332,7 +332,7 @@ class Rocket(ImagePoint):
         Vector magnitude function.
         """
         return sqrt(v[0]**2 + v[1]**2)
-
+    
     def fgrav(self):
         """
         Vector force due to gravity, at current position.
@@ -342,7 +342,7 @@ class Rocket(ImagePoint):
         uvec = (-self._xy[0]/r, -self._xy[1]/r)
         F = G*self.mass()*self.planet.mass/r**2
         return [x*F for x in uvec]
-
+    
     def turn(self, event):
         """
         Respond to left/right turning key events.
@@ -352,7 +352,7 @@ class Rocket(ImagePoint):
 
     def _getposition(self):
         return self._xy
-
+    
     @property
     def xyposition(self):
         return self._xy
@@ -383,7 +383,7 @@ class Rocket(ImagePoint):
     @property
     def velocity(self):
         return self.vmag(self.V)
-
+    
     @property
     def acceleration(self):
         return self.vmag(self.A)
@@ -405,7 +405,7 @@ class Rocket(ImagePoint):
 
         
         
-
+    
 
 
 class Planet(MathApp):

@@ -38,7 +38,7 @@ class App(object):
     NOTE: Only **one** instance of an :class:`App` class or subclass may be 
     instantiated at a time.
     """
-
+    
     spritelist = []
     """
     List of all sprites currently active in the application.
@@ -114,7 +114,8 @@ class App(object):
             self.userfunc()
         else:
             self.step()
-        App._win.animate(self._animate)
+        if App._win:
+            App._win.animate(self._animate)
 
     @classmethod
     def _destroy(cls, *args):
@@ -237,7 +238,7 @@ class App(object):
         :returns: A (potentially empty) list of sprite references.
         """
         return App._spritesdict.get(sclass, [])
-
+    
     def step(self):
         """
         The :meth:`~App.step` method is called once per animation frame. Override
@@ -251,7 +252,7 @@ class App(object):
         
         """
         pass
-
+    
     def run(self, userfunc = None):
         """
         Calling the :meth:`~App.run` method begins the animation process whereby the 

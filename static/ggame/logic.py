@@ -47,7 +47,7 @@ class _BoolDevice(_MathDynamic, metaclass=ABCMeta):
     @property
     def In(self):
         return self._input
-
+    
     @In.setter
     def In(self, val):
         try:
@@ -59,7 +59,7 @@ class _BoolDevice(_MathDynamic, metaclass=ABCMeta):
     @property
     def Enable(self):
         return self._enable
-
+    
     @Enable.setter
     def Enable(self, val):
         self._enable = self.Eval(val)
@@ -68,7 +68,7 @@ class _BoolDevice(_MathDynamic, metaclass=ABCMeta):
     @_recursiontrap     # MUST use with any implementation that may recurse!
     def _getvalue(self):
         return None
-
+    
     def _inputState(self, value):
         """
         interprets a value that could be single input or a list of inputs!
@@ -88,19 +88,19 @@ class _BoolDevice(_MathDynamic, metaclass=ABCMeta):
             return False
         else: 
             return None
-
+    
     def __call__(self):
         if self.Enable:
             return self._getvalue()
         else:
             return None
-
+    
     def GetInput(self, inputname):
         return self._inputState(self._indict[inputname])
 
     def SetInput(self, inputname, reference):
         self._indict[inputname] = self.Eval(reference)
-
+    
 
 
 class _BoolOneInput(_BoolDevice):
@@ -111,7 +111,7 @@ class _BoolOneInput(_BoolDevice):
         """
         super().__init__(1, *args, **kwargs)
 
-
+    
 class _BoolMultiInput(_BoolDevice):
 
     def __init__(self, *args, **kwargs):

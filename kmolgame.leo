@@ -25,7 +25,7 @@
 <v t="leo.20181129171705.1"><vh>@edit __init__.py</vh></v>
 <v t="leo.20181129171705.2" a="E"><vh>@clean app.py</vh>
 <v t="leo.20181129171705.23"><vh>Declarations (app.py)</vh></v>
-<v t="leo.20181129171705.24"><vh>class App</vh>
+<v t="leo.20181129171705.24" a="E"><vh>class App</vh>
 <v t="leo.20181129171705.25"><vh>App.__init__</vh></v>
 <v t="leo.20181129171705.26"><vh>App._routeEvent</vh></v>
 <v t="leo.20181129171705.27"><vh>App._keyEvent</vh></v>
@@ -104,7 +104,7 @@
 <v t="leo.20181129171705.86"><vh>class PolygonAsset</vh>
 <v t="leo.20181129171705.87"><vh>PolygonAsset.__init__</vh></v>
 </v>
-<v t="leo.20181129171705.88"><vh>class LineAsset</vh>
+<v t="leo.20181129171705.88" a="E"><vh>class LineAsset</vh>
 <v t="leo.20181129171705.89"><vh>LineAsset.__init__</vh></v>
 </v>
 <v t="leo.20181129171705.90"><vh>class TextAsset</vh>
@@ -256,14 +256,14 @@
 </v>
 <v t="leo.20181129171705.12" a="E"><vh>@clean line.py</vh>
 <v t="leo.20181129171706.52"><vh>Declarations (line.py)</vh></v>
-<v t="leo.20181129171706.53"><vh>class LineSegment</vh>
+<v t="leo.20181129171706.53" a="E"><vh>class LineSegment</vh>
 <v t="leo.20181129171706.54"><vh>LineSegment.__init__</vh></v>
 <v t="leo.20181129171706.55"><vh>LineSegment._buildAsset</vh></v>
 <v t="leo.20181129171706.56"><vh>LineSegment.physicalPointTouching</vh></v>
 <v t="leo.20181129171706.57"><vh>LineSegment.translate</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.13"><vh>@clean logic.py</vh>
+<v t="leo.20181129171705.13" a="E"><vh>@clean logic.py</vh>
 <v t="leo.20181129171706.58"><vh>Declarations (logic.py)</vh></v>
 <v t="leo.20181129171706.59"><vh>_recursiontrap (logic.py)</vh></v>
 <v t="leo.20181129171706.60"><vh>class _BoolDevice</vh>
@@ -304,7 +304,7 @@
 <v t="leo.20181129171706.88"><vh>BoolSRFF.Q</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.14" a="E"><vh>@clean mathapp.py</vh>
+<v t="leo.20181129171705.14"><vh>@clean mathapp.py</vh>
 <v t="leo.20181129171706.89"><vh>Declarations (mathapp.py)</vh></v>
 <v t="leo.20181129171706.90"><vh>class MathApp</vh>
 <v t="leo.20181129171706.91"><vh>MathApp.__init__</vh></v>
@@ -414,7 +414,7 @@
 <v t="leo.20181129171707.86"><vh>_MathVisual._buildAsset</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.16"><vh>@clean point.py</vh>
+<v t="leo.20181129171705.16" a="E"><vh>@clean point.py</vh>
 <v t="leo.20181129171707.87"><vh>Declarations (point.py)</vh></v>
 <v t="leo.20181129171707.88"><vh>class _Point</vh>
 <v t="leo.20181129171707.89"><vh>_Point.__init__</vh></v>
@@ -424,7 +424,7 @@
 <v t="leo.20181129171707.93"><vh>_Point.translate</vh></v>
 <v t="leo.20181129171707.94"><vh>_Point.distanceTo</vh></v>
 </v>
-<v t="leo.20181129171707.95"><vh>class Point</vh>
+<v t="leo.20181129171707.95" a="E"><vh>class Point</vh>
 <v t="leo.20181129171707.96"><vh>Point.__init__</vh></v>
 <v t="leo.20181129171707.97"><vh>Point._buildAsset</vh></v>
 </v>
@@ -437,7 +437,7 @@
 <v t="leo.20181129171705.17"><vh>@clean pygamedeps.py</vh>
 <v t="leo.20181129171707.102"><vh>module_exists (pygamedeps.py)</vh></v>
 </v>
-<v t="leo.20181129171705.18" a="E"><vh>@clean slider.py</vh>
+<v t="leo.20181129171705.18"><vh>@clean slider.py</vh>
 <v t="leo.20181129171707.103"><vh>Declarations (slider.py)</vh></v>
 <v t="leo.20181129171707.104" a="E"><vh>class Slider</vh>
 <v t="leo.20181129171707.105"><vh>Slider.__init__</vh></v>
@@ -478,7 +478,7 @@
 <v t="leo.20181129171707.136"><vh>Sound.volume</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.20" a="E"><vh>@clean sprite.py</vh>
+<v t="leo.20181129171705.20"><vh>@clean sprite.py</vh>
 <v t="leo.20181129171707.137"><vh>Declarations (sprite.py)</vh></v>
 <v t="leo.20181129171707.138" a="E"><vh>class Sprite</vh>
 <v t="leo.20181129171707.139"><vh>Sprite.__init__</vh></v>
@@ -543,7 +543,9 @@
 <v t="leo.20181129163357.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20181129163357.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
-<v t="leo.20181129164549.1"><vh>有關 kmolgame</vh></v>
+<v t="leo.20181129164549.1" a="E"><vh>有關 kmolgame</vh>
+<v t="leo.20181130105336.1"><vh>更新 ggame 2018.11.30</vh></v>
+</v>
 <v t="leo.20181130073250.1" a="E"><vh>最簡單的 Ggame 範例</vh>
 <v t="leo.20181130073306.1" a="E"><vh>@clean simple1.html</vh>
 <v t="leo.20181130073306.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
@@ -2350,12 +2352,9 @@ if module_exists('pygame'):
 if module_exists('browser') and module_exists('javascript'):
 
     from browser import window, document, load
-    #from javascript import JSObject, JSConstructor
-    #load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
-    #load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
-    # 改為從自帶 static 取得, 看看是否會有問題?
-    load("static/pixi-4.8.2.min.js")
-    load("static/buzz-1.2.1.js")
+    from javascript import JSObject, JSConstructor
+    load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
+    load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
     major = window.__BRYTHON__.implementation[0]
     minor = window.__BRYTHON__.implementation[1]
     if major == 3 and minor &gt;= 3 or major &gt; 3:
@@ -2443,7 +2442,7 @@ else:
     except ImportError:
         from headlessdeps import *
   
-
+    
 @language python
 @tabwidth -4
 </t>
@@ -2490,7 +2489,7 @@ from ggame.event import *
     NOTE: Only **one** instance of an :class:`App` class or subclass may be 
     instantiated at a time.
     """
-
+    
     spritelist = []
     """
     List of all sprites currently active in the application.
@@ -2580,7 +2579,8 @@ def _remove(cls, obj):
         self.userfunc()
     else:
         self.step()
-    App._win.animate(self._animate)
+    if App._win:
+        App._win.animate(self._animate)
 
 </t>
 <t tx="leo.20181129171705.32">@classmethod
@@ -3205,6 +3205,7 @@ if module_exists('PIL'):
       self.baserect = _GFX_Rectangle(0, 0, self.basewidth, self.baseheight)
       self.framerect = self.baserect  
 
+    @classmethod
     def fromTexture(cls, texture, frame):
       inst = cls()
       inst.img = texture.img
@@ -3264,23 +3265,29 @@ if module_exists('PIL'):
       self.height = texture.height
       self.rotation = 0.0
 
+    @property
     def position(self):
       return self.pos
 
+    @position.setter
     def position(self, value):
       self.pos.x = value[0]
       self.pos.y = value[1]
 
+    @property
     def anchor(self):
       return self.anch
  
+    @anchor.setter
     def anchor(self, value):
       self.anch.x = value[0]
       self.anch.y = value[1]
 
+    @property
     def scale(self):
       return self.scal
 
+    @scale.setter
     def scale(self, value):
       self.scal.x = value[0]
       self.scal.y = value[1]
@@ -3480,7 +3487,6 @@ if module_exists('PIL'):
   class GFX_Window(object):
     
     def __init__(self, width, height, onclose):
-      self._w = window.open("", "")
       # 假如要執行時額外跳出一個視窗
       #self._w = window.open("", "")
       # 在原先的視窗中執行
@@ -3512,7 +3518,7 @@ if module_exists('PIL'):
       SND.all().stop()
       self._stage.destroy()
   
-
+    
 @language python
 @tabwidth -4
 @ignore
@@ -5752,7 +5758,7 @@ def volume(self):
 <t tx="leo.20181129171707.136">@volume.setter
 def volume(self, value):
     self.SND.setVolume(value)
-   
+
 </t>
 <t tx="leo.20181129171707.137">try:
     from ggame.sysdeps import *
@@ -6380,6 +6386,7 @@ def _destroy(cls, *args):
     This will clean up any class level storage.
     """ 
     App._destroy(*args)  # hit the App class first
+    MathApp.time = None
     MathApp._mathVisualList = [] 
     MathApp._mathDynamicList = []
     MathApp._mathMovableList = []
@@ -7262,8 +7269,8 @@ def _addVisual(cls, obj):
 
 
 </t>
-<t tx="leo.20181129171708.1">from ggame.mathapp import MathApp, _MathDynamic
-
+<t tx="leo.20181129171708.1">from time import time
+from ggame.mathapp import MathApp, _MathDynamic
 
 </t>
 <t tx="leo.20181129171708.2">class Timer(_MathDynamic):
@@ -7276,13 +7283,21 @@ def _addVisual(cls, obj):
     self.callbacks = {}
     self.reset()
     self.step()
-    self._start = self._reset  #first time
     self.next = None
     MathApp._addDynamic(self)  # always dynamically defined
     
 </t>
 <t tx="leo.20181129171708.4">def reset(self):
+    """
+    Set the reference time to the MathApp current time. If the timer is used
+    or initialized before the app, then set the reference time to match the
+    system time instead.
+    
+    :returns: None
+    """
     self._reset = MathApp.time
+    if not self._reset:
+        self._reset = time.time()
     
 </t>
 <t tx="leo.20181129171708.5">def step(self):
@@ -7374,8 +7389,32 @@ app = App()
 # Run the app
 app.run()
 '''
-from ggame import App, Color, LineStyle, Sprite
-from ggame import RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
+'''
+from ggame import (
+    App, 
+    Color, 
+    LineStyle, 
+    Sprite, 
+    RectangleAsset, 
+    ImageAsset,
+    CircleAsset, 
+    EllipseAsset, 
+    PolygonAsset,
+)
+
+# reverse - change the ball direction
+def reverse(b):
+    b.direction *= -1
+
+# Set up function for handling screen refresh
+def step():
+    if ball.go:
+        ball.x += ball.direction
+        if ball.x + ball.width &gt; myapp.width or ball.x &lt; 0:
+            ball.x -= ball.direction
+            reverse(ball)
+
+myapp = App()
 
 # Three primary colors with no transparency (alpha = 1.0)
 red = Color(0xff0000, 1.0)
@@ -7388,10 +7427,165 @@ thinline = LineStyle(1, black)
 # A graphics asset that represents a rectangle
 rectangle = RectangleAsset(50, 20, thinline, blue)
 
+# define colors and line style
+green = Color(0x00ff00, 1)
+black = Color(0, 1)
+noline = LineStyle(0, black)
+# a rectangle asset and sprite to use as background
+bg_asset = RectangleAsset(myapp.width, myapp.height, noline, green)
+bg = Sprite(bg_asset, (0,0))
+
 # Now display a rectangle
 Sprite(rectangle)
 
+# A ball! This is already in the ggame-tutorials repository
+ball_asset = ImageAsset("images/orb-150545_640.png")
+ball = Sprite(ball_asset, (0, 0))
+# Original image is too big. Scale it to 1/10 its original size
+ball.scale = 0.1
+# custom attributes
+ball.direction = 1
+ball.go = True
+
+myapp.run(step)
+'''
+'''
+from ggame import (
+    App, 
+    Color, 
+    Sound,
+    LineStyle, 
+    Sprite, 
+    RectangleAsset, 
+    ImageAsset,
+    CircleAsset, 
+    EllipseAsset, 
+    PolygonAsset,
+    SoundAsset,
+)
+
+myapp = App()
+
+# define colors and line style
+green = Color(0x00ff00, 1)
+black = Color(0, 1)
+noline = LineStyle(0, black)
+# a rectangle asset and sprite to use as background
+bg_asset = RectangleAsset(myapp.width, myapp.height, noline, green)
+bg = Sprite(bg_asset, (0,0))
+# A ball! This is already in the ggame-tutorials repository
+ball_asset = ImageAsset("images/orb-150545_640.png")
+ball = Sprite(ball_asset, (0, 0))
+# Original image is too big. Scale it to 1/10 its original size
+ball.scale = 0.1
+# custom attributes
+ball.direction = 1
+ball.go = True
+# Sounds
+pew1_asset = SoundAsset("sounds/pew1.mp3")
+pew1 = Sound(pew1_asset)
+pop_asset = SoundAsset("sounds/reappear.mp3")
+pop = Sound(pop_asset)
+
+# reverse - change the ball direction
+def reverse(b):
+    pop.play()
+    b.direction *= -1
+
+# Set up function for handling screen refresh
+def step():
+    if ball.go:
+        ball.x += ball.direction
+        if ball.x + ball.width &gt; myapp.width or ball.x &lt; 0:
+            ball.x -= ball.direction
+            reverse(ball)
+
+# Handle the space key
+def spaceKey(event):
+    ball.go = not ball.go
+
+# Handle the "reverse" key
+def reverseKey(event):
+    reverse(ball)
+
+# Handle the mouse click
+def mouseClick(event):
+    pew1.play()
+    ball.x = event.x
+    ball.y = event.y
+    
+# Set up event handlers for the app
+myapp.listenKeyEvent('keydown', 'space', spaceKey)
+myapp.listenKeyEvent('keydown', 'r', reverseKey)
+myapp.listenMouseEvent('click', mouseClick)
+    
+myapp.run(step)
+'''
+'''
+from ggame import App, Color, LineStyle, Sprite
+from ggame import CircleAsset
+
+red = Color(0xff0000, 1.0)
+green = Color(0x00ff00, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0x000000, 1.0)
+
+thinline = LineStyle(1, black)
+mycircle = CircleAsset(5, thinline, blue)
+xcoordinates = list(range(100, 600, 10))
+
+# Generate a list of sprites that form a line!
+sprites = [Sprite(mycircle, (x, x*0.5 + 100)) for x in xcoordinates]
+
+myapp = App()
+myapp.run()
+'''
+from ggame import (
+    App, 
+    Color, 
+    Sound,
+    LineStyle, 
+    Sprite, 
+    LineAsset,
+    RectangleAsset, 
+    ImageAsset,
+    CircleAsset, 
+    EllipseAsset, 
+    PolygonAsset,
+    SoundAsset,
+)
+
+from ggame.point import Point
+from ggame.line import LineSegment
+from ggame.mathapp import MathApp
+
+#p1 = Point((0,1), color=Color(0xff8000, 1.0))
+#p1.movable = True
+p1 = Point((200,200))
+ls = LineSegment(p1, Point((300,300)))
+
+# Three primary colors with no transparency (alpha = 1.0)
+red = Color(0xff0000, 1.0)
+green = Color(0x00ff00, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0x000000, 1.0)
+
+# Define a line style that is a thin (1 pixel) wide black line
+thinline = LineStyle(1, black)
+# A graphics asset that represents a rectangle
+rectangle = RectangleAsset(50, 20, thinline, blue)
+line = LineAsset(100, 100, LineStyle(1, blue))
+
+# Now display a rectangle
+Sprite(rectangle)
+Sprite(line)
+
+
 myapp = App()
 myapp.run()</t>
+<t tx="leo.20181130105336.1">https://github.com/BrythonServer/ggame
+
+更新為下列版本, 目前仍只能用於 Pixi.js 3.0.5 版, 必須更新為 Pixi.js 4
+https://github.com/BrythonServer/ggame/tree/6ccee8f01711b94273e929380ff4d19a4b505991</t>
 </tnodes>
 </leo_file>

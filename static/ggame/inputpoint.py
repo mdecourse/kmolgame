@@ -79,8 +79,8 @@ class InputImageToggle(ImagePoint):
 
     def __call__(self):
         return self.statelist[self.togglestate]
-
-
+    
+    
 class MetalToggle(InputImageToggle):
     def __init__(self, initindex, *args, **kwargs):
         """

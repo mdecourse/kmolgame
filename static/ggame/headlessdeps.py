@@ -415,10 +415,6 @@ if module_exists('PIL'):
     
     def __init__(self, width, height, onclose):
       self._w = window.open("", "")
-      # 假如要執行時額外跳出一個視窗
-      #self._w = window.open("", "")
-      # 在原先的視窗中執行
-      self._w = window
       self.width = width if width != 0 else 100
       self.height = height if height != 0 else 100
       self._stage = JSConstructor(GFX.Container)()

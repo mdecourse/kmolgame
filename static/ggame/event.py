@@ -182,7 +182,7 @@ class KeyEvent(_Event):
         The `key` attribute identifes the key in text form (e.g. 'back slash').
 
         The list of key numbers and description strings follows::
-
+    
             8: 'backspace',
             9: 'tab',
             13: 'enter',
