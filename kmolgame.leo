@@ -14,7 +14,7 @@
 <v t="leo.20181129164322.1"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129163716.1"><vh>game body</vh></v>
 </v>
-<v t="leo.20181129165714.1"><vh>@clean game2.html</vh>
+<v t="leo.20181129165714.1" a="E"><vh>@clean game2.html</vh>
 <v t="leo.20181129165714.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129165714.3"><vh>game body</vh></v>
 </v>
@@ -7502,6 +7502,12 @@ def reverse(b):
     #pop.play()
     b.direction *= -1
 
+def ball_y_down():
+    ball.y += 3
+    
+def ball_y_up():
+    ball.y -= 3
+
 # Set up function for handling screen refresh
 def step():
     if ball.go:
@@ -7517,6 +7523,12 @@ def spaceKey(event):
 # Handle the "reverse" key
 def reverseKey(event):
     reverse(ball)
+    
+def ballDown(event):
+    ball_y_down()
+    
+def ballUp(event):
+    ball_y_up()
 
 # Handle the mouse click
 def mouseClick(event):
@@ -7528,6 +7540,9 @@ def mouseClick(event):
 myapp.listenKeyEvent('keydown', 'space', spaceKey)
 myapp.listenKeyEvent('keydown', 'r', reverseKey)
 myapp.listenMouseEvent('click', mouseClick)
+
+myapp.listenKeyEvent('keydown', 'down arrow', ballDown)
+myapp.listenKeyEvent('keydown', 'up arrow', ballUp)
     
 myapp.run(step)
 
