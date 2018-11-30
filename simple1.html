@@ -22,6 +22,7 @@ brython({debug:1, pythonpath:['static']});
 </script>
 <script type="text/python">
 '''
+# example 1
 # 從 ggame 目錄中, 導入 App, ImageAsset 與 Sprite 模組
 from ggame import (
     App, 
@@ -39,6 +40,7 @@ app = App()
 app.run()
 '''
 '''
+# example 2
 from ggame import (
     App, 
     Color, 
@@ -99,6 +101,7 @@ ball.go = True
 myapp.run(step)
 '''
 
+# example 3
 from ggame import (
     App, 
     Color, 
@@ -171,6 +174,7 @@ myapp.listenMouseEvent('click', mouseClick)
 myapp.run(step)
 
 '''
+# example 4
 from ggame import App, Color, LineStyle, Sprite
 from ggame import CircleAsset
 
@@ -190,6 +194,7 @@ myapp = App()
 myapp.run()
 '''
 '''
+# example 5
 from ggame import (
     App, 
     Color, 

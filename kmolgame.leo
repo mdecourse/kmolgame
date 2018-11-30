@@ -21,9 +21,9 @@
 <v t="leo.20181129163741.1"><vh>@edit bunny.html</vh></v>
 <v t="leo.20181129163342.2"><vh>@edit spacewar.html</vh></v>
 <v t="leo.20181129165000.1"><vh>@edit template.html</vh></v>
-<v t="leo.20181129171546.1" a="E"><vh>@path static/ggame</vh>
+<v t="leo.20181129171546.1"><vh>@path static/ggame</vh>
 <v t="leo.20181129171705.1"><vh>@edit __init__.py</vh></v>
-<v t="leo.20181129171705.2" a="E"><vh>@clean app.py</vh>
+<v t="leo.20181129171705.2"><vh>@clean app.py</vh>
 <v t="leo.20181129171705.23"><vh>Declarations (app.py)</vh></v>
 <v t="leo.20181129171705.24" a="E"><vh>class App</vh>
 <v t="leo.20181129171705.25"><vh>App.__init__</vh></v>
@@ -43,7 +43,7 @@
 <v t="leo.20181129171705.39"><vh>App.run</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.3" a="E"><vh>@clean asset.py</vh>
+<v t="leo.20181129171705.3"><vh>@clean asset.py</vh>
 <v t="leo.20181129171705.40"><vh>Declarations (asset.py)</vh></v>
 <v t="leo.20181129171705.41"><vh>class Frame</vh>
 <v t="leo.20181129171705.42"><vh>Frame.__init__</vh></v>
@@ -478,7 +478,7 @@
 <v t="leo.20181129171707.136"><vh>Sound.volume</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.20" a="E"><vh>@clean sprite.py</vh>
+<v t="leo.20181129171705.20"><vh>@clean sprite.py</vh>
 <v t="leo.20181129171707.137"><vh>Declarations (sprite.py)</vh></v>
 <v t="leo.20181129171707.138" a="E"><vh>class Sprite</vh>
 <v t="leo.20181129171707.139"><vh>Sprite.__init__</vh></v>
@@ -523,10 +523,10 @@
 <v t="leo.20181129171707.178"><vh>Sprite.destroy</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.21" a="E"><vh>@clean sysdeps.py</vh>
+<v t="leo.20181129171705.21"><vh>@clean sysdeps.py</vh>
 <v t="leo.20181129171707.179"><vh>module_exists (sysdeps.py)</vh></v>
 </v>
-<v t="leo.20181129171705.22" a="E"><vh>@clean timer.py</vh>
+<v t="leo.20181129171705.22"><vh>@clean timer.py</vh>
 <v t="leo.20181129171708.1"><vh>Declarations (timer.py)</vh></v>
 <v t="leo.20181129171708.2" a="E"><vh>class Timer</vh>
 <v t="leo.20181129171708.3"><vh>Timer.__init__</vh></v>
@@ -546,11 +546,15 @@
 <v t="leo.20181129164549.1" a="E"><vh>有關 kmolgame</vh>
 <v t="leo.20181130105336.1"><vh>更新 ggame 2018.11.30</vh></v>
 </v>
-<v t="leo.20181130073250.1" a="E"><vh>最簡單的 Ggame 範例</vh>
+<v t="leo.20181130073250.1"><vh>最簡單的 Ggame 範例</vh>
 <v t="leo.20181130073306.1" a="E"><vh>@clean simple1.html</vh>
 <v t="leo.20181130073306.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181130073306.3"><vh>game body</vh></v>
 </v>
+</v>
+<v t="leo.20181130214116.1" a="E"><vh>@clean conway.html</vh>
+<v t="leo.20181130214116.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
+<v t="leo.20181130214116.3"><vh>game body</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -7376,6 +7380,7 @@ brython({debug:1, pythonpath:['static']});
 </t>
 <t tx="leo.20181130073306.3">@language python
 '''
+# example 1
 # 從 ggame 目錄中, 導入 App, ImageAsset 與 Sprite 模組
 from ggame import (
     App, 
@@ -7393,6 +7398,7 @@ app = App()
 app.run()
 '''
 '''
+# example 2
 from ggame import (
     App, 
     Color, 
@@ -7453,6 +7459,7 @@ ball.go = True
 myapp.run(step)
 '''
 
+# example 3
 from ggame import (
     App, 
     Color, 
@@ -7525,6 +7532,7 @@ myapp.listenMouseEvent('click', mouseClick)
 myapp.run(step)
 
 '''
+# example 4
 from ggame import App, Color, LineStyle, Sprite
 from ggame import CircleAsset
 
@@ -7544,6 +7552,7 @@ myapp = App()
 myapp.run()
 '''
 '''
+# example 5
 from ggame import (
     App, 
     Color, 
@@ -7593,5 +7602,219 @@ myapp.run()
 
 更新為下列版本, 目前仍只能用於 Pixi.js 3.0.5 版, 必須更新為 Pixi.js 4
 https://github.com/BrythonServer/ggame/tree/6ccee8f01711b94273e929380ff4d19a4b505991</t>
+<t tx="leo.20181130214116.1">@language html
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;&lt;game_title&gt;&gt;
+&lt;link rel="shortcut icon" href="css/favicon.ico"&gt;    
+&lt;link rel="stylesheet" type="text/css" href="css/bssite.css" media="screen" /&gt;
+ 
+&lt;script type="text/javascript" src="static/jquery-3.3.1.min.js" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/jquery-ui.1.12.1.min.js" &gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/pixi-4.8.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/buzz-1.2.1.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/brython-3.7.0.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="static/brython_stdlib-3.7.0.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+window.onload=function(){
+brython({debug:1, pythonpath:['static']});
+}
+&lt;/script&gt;
+&lt;script type="text/python"&gt;
+@others
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</t>
+<t tx="leo.20181130214116.2">&lt;title&gt;Conway&lt;/title&gt;
+
+</t>
+<t tx="leo.20181130214116.3">@language python
+# example 6
+# Exemplar implementation of the Conway's Life Project
+
+from ggame import CircleAsset, Color, LineStyle, Sprite
+from ggame import App
+
+red = Color(0xff0000, 1.0)
+blue = Color(0x0000ff, 1.0)
+black = Color(0,1.0)
+
+CELLDIAMETER = 10
+redcircle = CircleAsset(CELLDIAMETER/2, LineStyle(0, black), red)
+bluecircle = CircleAsset(CELLDIAMETER/2, LineStyle(0, black), blue)
+
+deadcells = []
+livecells = {}
+neighborsof = {}
+killlist = []
+birthlist = []
+
+# logical screen shift
+screenoffset = (0,0)
+
+# physical coordinates from logical
+pfroml = lambda p: (p[0]*CELLDIAMETER, p[1]*CELLDIAMETER)
+# logical coordinates from physical
+lfromp = lambda p: (p[0]//CELLDIAMETER, p[1]//CELLDIAMETER)
+adjacentdelta = [(-1,-1), (0,-1), (1,-1), (-1,0), (1,0), (-1,1), (0,1), (1,1)]
+adjacentcoords = lambda pos, delta: [(pos[0]+x[0], pos[1]+x[1]) for x in delta]
+
+def GetAdjacent(coords):
+    # build a list of adjacentcoordinates
+    try:
+        neighbors = neighborsof[coords]
+    except:
+        # build a list of adjacent coordinates
+        neighbors = adjacentcoords(coords, adjacentdelta)
+        neighborsof[coords] = neighbors
+    return neighbors
+
+def NewCellAt(coords):
+    global screenoffset
+    if not coords in livecells:
+        try:
+            newcell = deadcells.pop()
+        except:
+            newcell = (Sprite(redcircle,(0,0)), Sprite(bluecircle,(0,0)))
+        livecells[coords] = newcell
+        newcell[0].position = newcell[1].position = pfroml((coords[0]+screenoffset[0], coords[1]+screenoffset[1]))
+        newcell[0].visible = True
+        newcell[1].visible = False
+
+# return number of live neighbors and list of empty neighbors
+def ScanCell(coords):
+    neighbors = GetAdjacent(coords)
+    count = 0
+    empties = []
+    for n in neighbors:
+        if n in livecells:
+            count = count + 1
+        else:
+            empties.append(n)
+    return count, empties
+
+
+def step():
+    global killlist
+    global birthlist
+    global running
+
+    if not running:
+        return
+    allempties = set()
+    # scan living cells
+    for p, val in livecells.items():
+        # change reds to blue
+        if val[0].visible:
+            val[0].visible = False
+            val[1].visible = True
+        n, empties = ScanCell(p)
+        if n &gt; 3 or n &lt; 2:
+            killlist.append(p)
+        allempties.update(empties)
+    # scan all neighboring empty cells to find newbies
+    for p in allempties:
+        n, empties = ScanCell(p)
+        if n == 3:
+            birthlist.append(p)
+    # process deaths
+    for p in killlist:
+        c = livecells.pop(p)
+        c[0].visible = c[1].visible = False
+        deadcells.append(c)
+    # process births
+    for p in birthlist:
+        NewCellAt(p)
+    
+    # clean up
+    killlist = []
+    birthlist = []
+        
+"""
+def MakeAGlider(pos):
+    deltas = [(0,0), (1,1), (2,1), (2,0), (2,-1)]
+    for p in deltas:
+        NewCellAt((pos[0]+p[0],pos[1]+p[1]))
+
+for i in range(5):
+    MakeAGlider((i*6, i*2))
+"""
+
+mousedown = None
+running = False
+
+def MouseDown(event):
+    global mousedown
+    global screenoffset
+    mousedown = True
+    pos = lfromp((event.x, event.y))
+    NewCellAt((pos[0]-screenoffset[0], pos[1]-screenoffset[1]))
+
+def MouseUp(event):
+    global mousedown
+    mousedown = False
+
+def MouseMove(event):
+    global screenoffset
+    if mousedown:
+        pos = lfromp((event.x, event.y))
+        NewCellAt((pos[0]-screenoffset[0], pos[1]-screenoffset[1]))
+        
+def Spacebar(event):
+    global running
+    if running:
+        running = False
+    else:
+        running = True
+
+def Left(event):
+    global screenoffset
+    screenoffset = (screenoffset[0]-1, screenoffset[1])
+    Move()
+    
+def Right(event):
+    global screenoffset
+    screenoffset = (screenoffset[0]+1, screenoffset[1])
+    Move()
+    
+def Up(event):
+    global screenoffset
+    screenoffset = (screenoffset[0], screenoffset[1]-1)
+    Move()
+    
+def Down(event):
+    global screenoffset
+    screenoffset = (screenoffset[0], screenoffset[1]+1)
+    Move()
+    
+def Move():
+    global screenoffset
+    for p, val in livecells.items():
+        pphys = pfroml((p[0]+screenoffset[0],p[1]+screenoffset[1]))
+        val[0].position = pphys
+        val[1].position = pphys
+
+App.listenMouseEvent('mousedown', MouseDown)
+App.listenMouseEvent('mouseup', MouseUp)
+App.listenMouseEvent('mousemove', MouseMove)
+App.listenKeyEvent('keypress', 'space', Spacebar)
+App.listenKeyEvent('keydown', 'left arrow', Left)
+App.listenKeyEvent('keydown', 'right arrow', Right)
+App.listenKeyEvent('keydown', 'up arrow', Up)
+App.listenKeyEvent('keydown', 'down arrow', Down)
+
+print("Press &lt;space&gt; to start and stop.")
+print("Use mouse to set initial living cells.")
+print("Use cursor keys to move the screen.")
+
+
+myapp = App()
+myapp.run(step)</t>
 </tnodes>
 </leo_file>
