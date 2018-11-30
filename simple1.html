@@ -98,7 +98,7 @@ ball.go = True
 
 myapp.run(step)
 '''
-'''
+
 from ggame import (
     App, 
     Color, 
@@ -128,7 +128,7 @@ ball = Sprite(ball_asset, (0, 0))
 # Original image is too big. Scale it to 1/10 its original size
 ball.scale = 0.1
 # custom attributes
-ball.direction = 1
+ball.direction = 10
 ball.go = True
 # Sounds
 pew1_asset = SoundAsset("sounds/pew1.mp3")
@@ -169,7 +169,7 @@ myapp.listenKeyEvent('keydown', 'r', reverseKey)
 myapp.listenMouseEvent('click', mouseClick)
     
 myapp.run(step)
-'''
+
 '''
 from ggame import App, Color, LineStyle, Sprite
 from ggame import CircleAsset
@@ -188,6 +188,7 @@ sprites = [Sprite(mycircle, (x, x*0.5 + 100)) for x in xcoordinates]
 
 myapp = App()
 myapp.run()
+'''
 '''
 from ggame import (
     App, 
@@ -232,7 +233,7 @@ Sprite(line)
 
 myapp = App()
 myapp.run()
-
+'''
 </script>
 </body>
 </html>

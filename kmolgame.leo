@@ -14,7 +14,7 @@
 <v t="leo.20181129164322.1"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129163716.1"><vh>game body</vh></v>
 </v>
-<v t="leo.20181129165714.1" a="E"><vh>@clean game2.html</vh>
+<v t="leo.20181129165714.1"><vh>@clean game2.html</vh>
 <v t="leo.20181129165714.2"><vh>&lt;&lt;game_title&gt;&gt;</vh></v>
 <v t="leo.20181129165714.3"><vh>game body</vh></v>
 </v>
@@ -478,7 +478,7 @@
 <v t="leo.20181129171707.136"><vh>Sound.volume</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.20"><vh>@clean sprite.py</vh>
+<v t="leo.20181129171705.20" a="E"><vh>@clean sprite.py</vh>
 <v t="leo.20181129171707.137"><vh>Declarations (sprite.py)</vh></v>
 <v t="leo.20181129171707.138" a="E"><vh>class Sprite</vh>
 <v t="leo.20181129171707.139"><vh>Sprite.__init__</vh></v>
@@ -2355,8 +2355,8 @@ if module_exists('browser') and module_exists('javascript'):
     from javascript import JSObject, JSConstructor
     #load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
     #load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
-    load("static/pixi-4.8.2.min.js")
-    #load("static/pixi-3.0.5.min.js")
+    #load("static/pixi-4.8.2.min.js")
+    load("static/pixi-3.0.5.min.js")
     load("static/buzz-1.2.1.js")
     major = window.__BRYTHON__.implementation[0]
     minor = window.__BRYTHON__.implementation[1]
@@ -5850,8 +5850,7 @@ from ggame.app import *
         LineAsset,
         ]:
         self.asset = asset
-        #self.GFX = GFX_Sprite(asset.GFX.generateTexture())
-        self.GFX = GFX_Sprite(asset.GFX.generateCanvasTexture())
+        self.GFX = GFX_Sprite(asset.GFX.generateTexture())
         #self.GFX = asset.GFX.clone() # GFX is PIXI Graphics (from Sprite)
         #self.GFX.visible = True
     elif type(asset) in [TextAsset]:
@@ -7453,7 +7452,7 @@ ball.go = True
 
 myapp.run(step)
 '''
-'''
+
 from ggame import (
     App, 
     Color, 
@@ -7483,7 +7482,7 @@ ball = Sprite(ball_asset, (0, 0))
 # Original image is too big. Scale it to 1/10 its original size
 ball.scale = 0.1
 # custom attributes
-ball.direction = 1
+ball.direction = 10
 ball.go = True
 # Sounds
 pew1_asset = SoundAsset("sounds/pew1.mp3")
@@ -7524,7 +7523,7 @@ myapp.listenKeyEvent('keydown', 'r', reverseKey)
 myapp.listenMouseEvent('click', mouseClick)
     
 myapp.run(step)
-'''
+
 '''
 from ggame import App, Color, LineStyle, Sprite
 from ggame import CircleAsset
@@ -7543,6 +7542,7 @@ sprites = [Sprite(mycircle, (x, x*0.5 + 100)) for x in xcoordinates]
 
 myapp = App()
 myapp.run()
+'''
 '''
 from ggame import (
     App, 
@@ -7586,7 +7586,9 @@ Sprite(line)
 
 
 myapp = App()
-myapp.run()</t>
+myapp.run()
+'''
+</t>
 <t tx="leo.20181130105336.1">https://github.com/BrythonServer/ggame
 
 更新為下列版本, 目前仍只能用於 Pixi.js 3.0.5 版, 必須更新為 Pixi.js 4
