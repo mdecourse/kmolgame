@@ -181,10 +181,10 @@
 </v>
 <v t="leo.20181129171705.6"><vh>@clean event.py</vh>
 <v t="leo.20181129171706.1"><vh>Declarations (event.py)</vh></v>
-<v t="leo.20181129171706.2"><vh>class _Event</vh>
+<v t="leo.20181129171706.2" a="E"><vh>class _Event</vh>
 <v t="leo.20181129171706.3"><vh>_Event.__init__</vh></v>
 </v>
-<v t="leo.20181129171706.4"><vh>class MouseEvent</vh>
+<v t="leo.20181129171706.4" a="E"><vh>class MouseEvent</vh>
 <v t="leo.20181129171706.5"><vh>MouseEvent.__init__</vh></v>
 </v>
 <v t="leo.20181129171706.6"><vh>class KeyEvent</vh>
@@ -254,7 +254,7 @@
 <v t="leo.20181129171706.51"><vh>Label.translate</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.12" a="E"><vh>@clean line.py</vh>
+<v t="leo.20181129171705.12"><vh>@clean line.py</vh>
 <v t="leo.20181129171706.52"><vh>Declarations (line.py)</vh></v>
 <v t="leo.20181129171706.53" a="E"><vh>class LineSegment</vh>
 <v t="leo.20181129171706.54"><vh>LineSegment.__init__</vh></v>
@@ -263,7 +263,7 @@
 <v t="leo.20181129171706.57"><vh>LineSegment.translate</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.13" a="E"><vh>@clean logic.py</vh>
+<v t="leo.20181129171705.13"><vh>@clean logic.py</vh>
 <v t="leo.20181129171706.58"><vh>Declarations (logic.py)</vh></v>
 <v t="leo.20181129171706.59"><vh>_recursiontrap (logic.py)</vh></v>
 <v t="leo.20181129171706.60"><vh>class _BoolDevice</vh>
@@ -414,7 +414,7 @@
 <v t="leo.20181129171707.86"><vh>_MathVisual._buildAsset</vh></v>
 </v>
 </v>
-<v t="leo.20181129171705.16" a="E"><vh>@clean point.py</vh>
+<v t="leo.20181129171705.16"><vh>@clean point.py</vh>
 <v t="leo.20181129171707.87"><vh>Declarations (point.py)</vh></v>
 <v t="leo.20181129171707.88"><vh>class _Point</vh>
 <v t="leo.20181129171707.89"><vh>_Point.__init__</vh></v>
@@ -2353,8 +2353,11 @@ if module_exists('browser') and module_exists('javascript'):
 
     from browser import window, document, load
     from javascript import JSObject, JSConstructor
-    load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
-    load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
+    #load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
+    #load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
+    load("static/pixi-4.8.2.min.js")
+    #load("static/pixi-3.0.5.min.js")
+    load("static/buzz-1.2.1.js")
     major = window.__BRYTHON__.implementation[0]
     minor = window.__BRYTHON__.implementation[1]
     if major == 3 and minor &gt;= 3 or major &gt; 3:
@@ -3493,7 +3496,7 @@ if module_exists('PIL'):
       self._w = window
       self.width = width if width != 0 else 100
       self.height = height if height != 0 else 100
-      self._stage = JSConstructor(GFX.Container)()
+      self._stage = GFX.Container.new()
       self._renderer = GFX.autoDetectRenderer(width, height, {'transparent':True})
       self._w.document.body.appendChild(self._renderer.view)
       self._w.onunload = onclose
@@ -5847,7 +5850,8 @@ from ggame.app import *
         LineAsset,
         ]:
         self.asset = asset
-        self.GFX = GFX_Sprite(asset.GFX.generateTexture())
+        #self.GFX = GFX_Sprite(asset.GFX.generateTexture())
+        self.GFX = GFX_Sprite(asset.GFX.generateCanvasTexture())
         #self.GFX = asset.GFX.clone() # GFX is PIXI Graphics (from Sprite)
         #self.GFX.visible = True
     elif type(asset) in [TextAsset]:

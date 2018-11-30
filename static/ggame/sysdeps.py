@@ -10,8 +10,11 @@ if module_exists('browser') and module_exists('javascript'):
 
     from browser import window, document, load
     from javascript import JSObject, JSConstructor
-    load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
-    load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
+    #load("https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.5/pixi.min.js")
+    #load("https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js")
+    load("static/pixi-4.8.2.min.js")
+    #load("static/pixi-3.0.5.min.js")
+    load("static/buzz-1.2.1.js")
     major = window.__BRYTHON__.implementation[0]
     minor = window.__BRYTHON__.implementation[1]
     if major == 3 and minor >= 3 or major > 3:
