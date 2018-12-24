@@ -9,8 +9,9 @@
  
 <script type="text/javascript" src="static/jquery-3.3.1.min.js" ></script>
 <script type="text/javascript" src="static/jquery-ui.1.12.1.min.js" ></script>
-<script type="text/javascript" src="static/pixi-4.8.2.min.js"></script>
-<script type="text/javascript" src="static/buzz-1.2.1.js"></script>
+<!-- 
+pixi 與 buzz 已經從 ggame 中的 sysdeps.py , 以 load 導入 <script type="text/javascript" src="static/pixi-4.8.2.min.js"></script>
+<script type="text/javascript" src="static/buzz-1.2.1.js"></script> -->
 <script type="text/javascript" src="static/brython-3.7.0.js"></script>
 <script type="text/javascript" src="static/brython_stdlib-3.7.0.js"></script>
 </head>
@@ -22,7 +23,7 @@ brython({debug:1, pythonpath:['static']});
 </script>
 <script type="text/python">
 '''
-# example 1
+# example 1, 在特定座標點導入影像檔案
 # 從 ggame 目錄中, 導入 App, ImageAsset 與 Sprite 模組
 from ggame import (
     App, 
@@ -100,8 +101,8 @@ ball.go = True
 
 myapp.run(step)
 '''
-
-# example 3
+'''
+# example 3 導入影像球後, 在水平方向座標增量, 增量碰到邊界則增量變號, 增量變為減量
 from ggame import (
     App, 
     Color, 
@@ -185,9 +186,9 @@ myapp.listenMouseEvent('click', mouseClick)
 
 myapp.listenKeyEvent('keydown', 'down arrow', ballDown)
 myapp.listenKeyEvent('keydown', 'up arrow', ballUp)
-    
-myapp.run(step)
 
+myapp.run(step)
+'''
 '''
 # example 4
 from ggame import App, Color, LineStyle, Sprite
@@ -207,7 +208,6 @@ sprites = [Sprite(mycircle, (x, x*0.5 + 100)) for x in xcoordinates]
 
 myapp = App()
 myapp.run()
-'''
 '''
 # example 5
 from ggame import (
@@ -229,10 +229,17 @@ from ggame.point import Point
 from ggame.line import LineSegment
 from ggame.mathapp import MathApp
 
-#p1 = Point((0,1), color=Color(0xff8000, 1.0))
-#p1.movable = True
-p1 = Point((200,200))
-ls = LineSegment(p1, Point((300,300)))
+def point(x, y):
+    # 點設為紅色, 尺寸 5
+    return Point((x, y), color=Color(0xff0000, 1.0), size=5)
+
+p1 = point(200,200)
+# 從 (200, 200) 畫線到 (300, 300)
+ls = LineSegment(p1, point(300,300))
+line2 = LineSegment(point(300,400), point(300,300))
+for i in range(0, 500, 50):
+    # 線寬 1, 藍色, no transparency
+    LineSegment(point(i, 0), point(i,500), style=LineStyle(1, Color(0x0000ff, 1.0)))
 
 # Three primary colors with no transparency (alpha = 1.0)
 red = Color(0xff0000, 1.0)
@@ -250,10 +257,9 @@ line = LineAsset(100, 100, LineStyle(1, blue))
 Sprite(rectangle)
 Sprite(line)
 
-
 myapp = App()
 myapp.run()
-'''
+
 </script>
 </body>
 </html>
